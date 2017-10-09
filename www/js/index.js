@@ -1,12 +1,13 @@
 var paused_count =0;
 var resumed_count = 0;
 var launched_count = 0;
+var launched = document.getElementById("launched");
 
 document.addEventListener("deviceready", onDeviceReady, false);
 		
 	
 function updateDisplay() {
-	$("#launched").text("Application launched: " + launched_count);
+	launched.text("Application launched: " + launched_count);
 	$("#resumed").text("Application paused: " + paused_count);
 	$("#paused").text("Application resumed: " + resumed_count);
 }
